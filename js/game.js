@@ -6,7 +6,9 @@ var game = (function(){
     },
     Calculate: function(){
       return Calculate
+    },
+    Timer: function(){
+      return Timer
     }
   }
-
 })();

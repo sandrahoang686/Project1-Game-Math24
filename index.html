@@ -10,37 +10,39 @@
     <header>
       <img src="./images/header.png"/>
       <nav>
-        <a href="#">Instructions</a>
-        <a href="#">New Game</a>
+        <a id="instructionsLink" href="#">Instructions</a>
+        <a id="gameLink" href="#">New Game</a>
       </nav>
     </header>
     <section id="main">
       <div id="instructions">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-      <div id="input">
-        <form>
-          <label for="expression">Answer</label><br>
-          <input type="text" id="expression" placeholder="solution here!">
-        </form>
-      </div>
-      <div id="card">
-        <div id="numbers" class="inner">
-          <p id="top-num">#</p>
-          <div id="leftRight">
-            <p id="right-num">#</p>
-            <p id="left-num">#</p>
-          </div>
-          <p id="bottom-num">#</p>
+      <div id="newGame">
+        <div id="input">
+          <form>
+            <label for="expression">Answer</label><br>
+            <input type="text" id="expression" placeholder="solution here!">
+          </form>
         </div>
-        <div id="diamond-wrapper">
-          <div id="diamond" class="outer">
+        <div id="card">
+          <div id="numbers" class="inner">
+            <p id="top-num">#</p>
+            <div id="leftRight">
+              <p id="right-num">#</p>
+              <p id="left-num">#</p>
+            </div>
+            <p id="bottom-num">#</p>
+          </div>
+          <div id="diamond-wrapper">
+            <div id="diamond" class="outer">
+            </div>
           </div>
         </div>
-      </div>
-      <div id="timer">
-      </div>
-      <div id="timer-score">
+        <div id="timer">
+        </div>
+        <div id="timer-score">
+        </div>
       </div>
 
 
@@ -49,6 +51,7 @@
     <script src="./js/jquery-3.2.1.js" charset="utf-8"></script>
     <script src="./js/random.js" charset="utf-8"></script>
     <script src="./js/math.js" charset="utf-8"></script>
+    <script src="./js/timer.js" charset="utf-8"></script>
     <script src="./js/game.js" charset="utf-8"></script>
     <script src="./js/main.js" charset="utf-8"></script>
   </body>

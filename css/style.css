@@ -1,3 +1,7 @@
+#newGame {
+  visibility: hidden;
+  padding-top: 2em;
+}
 #card {
   left: 30%;
   position: relative;
@@ -66,4 +70,8 @@
 input{
   width: 17em;
   height: 3em;
+}
+#solution{
+  padding-top: 0.2em;
+  padding-left: 0.2em;
 }
