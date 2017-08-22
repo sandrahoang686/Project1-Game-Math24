@@ -15,11 +15,11 @@ $(function(){
     Timer.hello();
 
 
-  $('#gameLink').click(function(){
+  $('#gameLink').click(function(e){
     $('#instructions').css('display', 'none');
     $('#newGame').css('visibility', 'visible');
     Random.generation();
-
+    setInterval(Timer.timer, 1000);
   })
 
   $('#instructionsLink').click(function(){
