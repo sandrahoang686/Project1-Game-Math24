@@ -8,6 +8,8 @@ $(function(){
     var Random=game.Random();
     var Calculate=game.Calculate();
     var Timer=game.Timer();
+    var time;
+
 
     //testing for method files
     Random.hello();
@@ -18,8 +20,11 @@ $(function(){
   $('#gameLink').click(function(e){
     $('#instructions').css('display', 'none');
     $('#newGame').css('visibility', 'visible');
+    $('#solution').empty();
     Random.generation();
-    setInterval(Timer.timer, 1000);
+    clearInterval(time);
+    seconds = 0;
+    time = setInterval(Timer.timer, 1000);
   })
 
   $('#instructionsLink').click(function(){

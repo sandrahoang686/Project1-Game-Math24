@@ -1,7 +1,7 @@
-var Timer = (function(){
+var seconds = 0;
+var minutes = 0;
 
-  var seconds = 0+'';
-  var minutes = 0+'';
+var Timer = (function(){
 
   function pad(n){
     return (n < 10) ? ("0" + n) : n;
@@ -12,6 +12,7 @@ var Timer = (function(){
       console.log('hello from timer');
     },
     timer: function(){
+      //clearInterval(time);
       if (seconds < 60){
         seconds++;
         if(seconds===60){
