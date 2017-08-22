@@ -1,0 +1,69 @@
+#card {
+  left: 30%;
+  position: relative;
+  width: 40em;
+  z-index: 1;
+}
+#top-num {
+  margin-left: 6.4em;
+  margin-top: 1em;
+  position: relative
+  z-index: 1;
+}
+#bottom-num {
+  margin-left: 6.4em;
+  margin-top: 1em;
+  position: relative
+  z-index: 1;
+}
+#leftRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 4em;
+  margin-top: 4em;
+}
+#left-num {
+  margin-left: 7em;
+}
+#diamond-wrapper {
+  position: absolute;
+  z-index: 0;
+}
+#diamond{
+  width: 0;
+  height: 0;
+  border: 20em solid transparent;
+  border-bottom-color: green;
+  position: relative;
+  top: -20em;
+  z-index: 0;
+}
+#diamond:after {
+  content: '';
+  position: absolute;
+  left: -20em;
+  top: 20em;
+  width: 0;
+  height: 0;
+  border: 20em solid transparent;
+  border-top-color: green;
+  z-index: 0;
+}
+.inner{
+  position: absolute;
+  z-index: 1;
+}
+.inner p{
+  height: 3.5em;
+  width: 3em;
+  font-size: 3em;
+  padding: 0;
+}
+#input {
+  float: left;
+}
+input{
+  width: 17em;
+  height: 3em;
+}
