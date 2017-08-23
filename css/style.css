@@ -46,6 +46,8 @@ nav a {
   position: relative;
   width: 40em;
   z-index: 1;
+  animation-name: stretch;
+  animation-duration: 3000ms;
 }
 #top-num {
   margin-left: 6.4em;
@@ -121,7 +123,51 @@ input{
 #fastestTime{
   display: none;
 }
-form{
+form {
   border: 0.5em solid #f5f5f5;
+  border-radius: 10%;
   padding: 1em;
+}
+#time-wrapper {
+  border: 0.5em solid #f5f5f5;
+  border-radius: 10%;
+  padding: 1em;
+}
+
+.signs {
+  -webkit-animation: slideIn 3s forwards;
+  animation: slideIn 5s forwards;
+  animation-iteration-count: infinite;
+  position: absolute;;
+  z-index: -1000;
+}
+@keyframes stretch {
+  0% {
+    transform: scale(.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideIn {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 1000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes slideIn {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 1000px;
+  }
+  100% {
+    left: 0;
+  }
 }
