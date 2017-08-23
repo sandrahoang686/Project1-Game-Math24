@@ -1,7 +1,5 @@
 //IMPLEMENTATION FILE
 
-//create board
-//scoring
 $(function(){
   console.log("connected");
 
@@ -33,13 +31,14 @@ $(function(){
     $('#timer-score').css('display', 'none');
   })
 
-  //When "instructions" is clicked, display it and hide game
+  //When "instructions" is clicked, display it and hide game and about div
   $('#instructionsLink').click(function(){
     $('#instructions').css('display','block');
     $('#about').css('display','none');
     $('#newGame').css('visibility', 'hidden');
   })
 
+  //When "about" is clicked, display it and hide game and instructions div
   $('#aboutLink').click(function(){
     $('#about').css('display', 'block');
     $('#instructions').css('display', 'none');

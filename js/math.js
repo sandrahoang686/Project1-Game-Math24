@@ -5,7 +5,7 @@ var Calculate = (function(){
     hello: function(){
       console.log('hello from math');
     },
-    timeArray: [],
+    timeArray: [], //Array for finished times when player gets correct answer
     onSubmit: function(answer, randNumbers) {
       var finishTime;
       var expr=answer;
