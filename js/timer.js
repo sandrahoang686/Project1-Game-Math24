@@ -23,6 +23,11 @@ var Timer = (function(){
         seconds=pad(seconds);
         $('#timer').html(`${minutes}:${seconds}`);
       }
+    },
+    timeInSeconds: function(key){
+      console.log('hi timeInSeconds');
+      var totalSeconds=key.split(/:/);
+      return parseInt(totalSeconds[0])*60+parseInt(totalSeconds[1]);
     }
   }
 
