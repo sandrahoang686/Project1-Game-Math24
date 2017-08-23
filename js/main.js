@@ -20,6 +20,8 @@ $(function(){
   $('#gameLink').click(function(e){
     $('#instructions').css('display', 'none');
     $('#newGame').css('visibility', 'visible');
+    $('#results-num').css('display', 'none');
+    $('#results-saying').css('display', 'none');
     $('#solution').empty();
     Random.generation();
     //Resetting the timer
@@ -51,6 +53,10 @@ $(function(){
       //Finding player's shortest amount of time
       var shortestTime = Math.min.apply(Math,timeArraySeconds);
       console.log(`Fastest Time: ${shortestTime}`);
+      if(timeArraySeconds.length>1){
+        $('#fastestTime').html(`Your shortest time is... ${shortestTime}`);
+        $('#fastestTime').css('display','block');
+      }
       return false;
     }
   })

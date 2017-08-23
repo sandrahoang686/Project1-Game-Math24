@@ -13,7 +13,7 @@ var Calculate = (function(){
       console.log('numExp', expr);
 
       //To make sure all numbers on the card are used
-      for (var i=0; i<array.length; i++){
+      for (var i=0; i<array.length-1; i++){
         var currentNum=array[i];
         var allNums = expr.includes(currentNum);
         var cat;
@@ -27,17 +27,20 @@ var Calculate = (function(){
       };
       if (cat===true) {
         var solution=eval(expr);
-        $('form').append(`<div id="solution"><h3>= ${solution}</h3></div>`)
+        $('#results-num').css('display', 'block');
+        $('#results-num').html(`${solution}`);
         if(solution !== 24){
-          $('#solution').append("<h3>That doesn't make 24...</h3>");
+          $('#results-saying').css('display', 'block');
+          $('#results-saying').html("That doesn't make 24...");
         }
         else { //When input is right, find time finished and hide timer!
-          $('#solution').append("<h3>Woot Woot, nice job!!!");
+          $('#results-saying').css('display', 'block');
+          $('#results-saying').html("Woot Woot, nice job!!!");
           $('#timer').css('display', 'none');
           finishTime=$('#timer').html();
           $('#finishedTime').html(`${finishTime}`);
           $('#timer-score').css('display', 'block');
-          //Push time finished to timeArray
+          //Push finished time to timeArray
           Calculate.timeArray.push(finishTime);
         }
       }

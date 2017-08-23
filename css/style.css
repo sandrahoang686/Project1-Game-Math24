@@ -78,3 +78,6 @@ input{
 #time-wrapper{
   float: right;
 }
+#fastestTime{
+  display: none;
+}
