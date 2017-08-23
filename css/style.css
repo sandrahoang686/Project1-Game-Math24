@@ -2,6 +2,9 @@
   visibility: hidden;
   padding-top: 2em;
 }
+#about {
+  display: none;
+}
 #card {
   left: 30%;
   position: relative;

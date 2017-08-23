@@ -19,6 +19,7 @@ $(function(){
   //When "New Game" is clicked, display game, generate new random numbers
   $('#gameLink').click(function(e){
     $('#instructions').css('display', 'none');
+    $('#about').css('display','none');
     $('#newGame').css('visibility', 'visible');
     $('#results-num').css('display', 'none');
     $('#results-saying').css('display', 'none');
@@ -35,7 +36,15 @@ $(function(){
   //When "instructions" is clicked, display it and hide game
   $('#instructionsLink').click(function(){
     $('#instructions').css('display','block');
+    $('#about').css('display','none');
     $('#newGame').css('visibility', 'hidden');
+  })
+
+  $('#aboutLink').click(function(){
+    $('#about').css('display', 'block');
+    $('#instructions').css('display', 'none');
+    $('#newGame').css('visibility', 'hidden');
+
   })
 
   //When hitting enter after inputting the solution, call the calculate function
