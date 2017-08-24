@@ -14,6 +14,7 @@ $(function(){
     Calculate.hello();
     Timer.hello();
 
+    var cardAnimation = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
   //When "New Game" is clicked, display game, generate new random numbers
   $('#gameLink').click(function(e){
     $('#instructions').css('display', 'none');
@@ -22,6 +23,12 @@ $(function(){
     $('#results-num').css('display', 'none');
     $('#results-saying').css('display', 'none');
     $('#solution').empty();
+    //animation in working
+    $('#card').addClass('Stretch');
+    $('#card').one(cardAnimation, function(e){
+      $('#card').removeClass('Stretch');
+    });
+    //Generate random numbers on card
     Random.generation();
     //Resetting the timer
     clearInterval(time);

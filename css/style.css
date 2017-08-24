@@ -16,6 +16,16 @@
   font-style: italic;
   font-size: 7em;
 }
+
+
+img{
+  width: 100px;
+  height: auto;
+  margin-top: 0.4em;
+  margin-left: 0.5em;
+  animation-name: Bounce;
+  animation-duration: 5000ms;
+}
 nav {
   background-color: #3d1d49;
   text-align: center;
@@ -46,9 +56,16 @@ nav a {
   position: relative;
   width: 40em;
   z-index: 1;
-  animation-name: stretch;
-  animation-duration: 3000ms;
+  /*animation-name: stretch;
+  animation-duration: 3000ms;*/
 }
+  #card.Stretch {
+    -webkit-animation: stretch 3000ms;
+    -moz-animation: stretch 3000ms;
+    -ms-animation: stretch 3000ms;
+    -o-animation: stretch 3000ms;
+    animation: stretch 3000ms;
+  }
 #top-num {
   margin-left: 6.4em;
   margin-top: 1em;
@@ -134,12 +151,10 @@ form {
   padding: 1em;
 }
 
-.signs {
-  -webkit-animation: slideIn 3s forwards;
-  animation: slideIn 5s forwards;
-  animation-iteration-count: infinite;
-  position: absolute;;
-  z-index: -1000;
+@keyframes Bounce {
+  0% {bottom: 5%;}
+  70% {transform: scale(1, 1);}
+  100% {bottom: 0; transform: scale(1.15, .8);}
 }
 @keyframes stretch {
   0% {
