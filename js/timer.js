@@ -12,7 +12,6 @@ var Timer = (function(){
       console.log('hello from timer');
     },
     timer: function(){
-      //clearInterval(time);
       if (seconds < 60){
         seconds++;
         if(seconds===60){

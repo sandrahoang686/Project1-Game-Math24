@@ -15,6 +15,7 @@ $(function(){
     Timer.hello();
 
     var cardAnimation = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
+
   //When "New Game" is clicked, display game, generate new random numbers
   $('#gameLink').click(function(e){
     $('#instructions').css('display', 'none');
@@ -23,7 +24,7 @@ $(function(){
     $('#results-num').css('display', 'none');
     $('#results-saying').css('display', 'none');
     $('#solution').empty();
-    //animation in working
+    //Stetch Animation each time new game is clicked
     $('#card').addClass('Stretch');
     $('#card').one(cardAnimation, function(e){
       $('#card').removeClass('Stretch');
@@ -33,7 +34,10 @@ $(function(){
     //Resetting the timer
     clearInterval(time);
     seconds = 0;
-    time = setInterval(Timer.timer, 1000);
+    //Start timer after Animation
+    setTimeout(function(){
+      time = setInterval(Timer.timer, 1000);
+    },3000);
     $('#timer').css('display', 'block');
     $('#timer-score').css('display', 'none');
   })
