@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <h1 id="title"> Math 24<img src="images/brain.gif"></h1>
+      <h1 id="title"> Math 24<img id="brain" src="images/brain.gif"></h1>
       <nav>
         <a id="aboutLink" href='#'>About</a>
         <a id="instructionsLink" href="#">Instructions</a>
@@ -19,19 +19,22 @@
     </header>
     <section id="main">
       <div id="about">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p>Math 24 is an arithmetical card game and experienced it's peak in the 1990s. The point of the same is to make the number, 24, with all four numbers but there are many versions of the game. The original version allows +, -, *, &#247, and () operations! </p>
+        <a href="https://en.wikipedia.org/wiki/24_Game">~wikipedia</a>
       </div>
       <div id="instructions">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>You will be playing the original version! Make the number, <span id='twenty4'>24</span>, and the only operations you can use are +, -, *, &#247, and (). You must use all four numbers and only once. Remember the operations of math!</p>
       </div>
       <div id="newGame">
         <div id="input">
           <form>
             <label for="expression">Answer</label><br>
             <input type="text" id="expression" placeholder="solution here!">
+            <div><h6 id='gameDiv'></h6></div>
             <h3 id="results-num"></h3>
             <h3 id="results-saying"></h3>
           </form>
+          <div id="game-rules"><span>Allowed operations (+, -, *, &#247, and paranthesis</span></div>
         </div>
         <div id="card">
           <div id="numbers" class="inner">
@@ -61,7 +64,6 @@
       </div>
       </div>
     </section>
-
     <script src="./js/jquery-3.2.1.js" charset="utf-8"></script>
     <script src="./js/random.js" charset="utf-8"></script>
     <script src="./js/math.js" charset="utf-8"></script>

@@ -21,15 +21,18 @@ $(function(){
     $('#instructions').css('display', 'none');
     $('#about').css('display','none');
     $('#newGame').css('visibility', 'visible');
+    $('#gameDiv').css('visibility', 'hidden');
     $('#results-num').css('display', 'none');
     $('#results-saying').css('display', 'none');
     $('#solution').empty();
+    // $('#expression').text('');
     //Stetch Animation each time new game is clicked
     $('#card').addClass('Stretch');
     $('#card').one(cardAnimation, function(e){
       $('#card').removeClass('Stretch');
     });
     //Generate random numbers on card
+    Random.randNumbers = [];
     Random.generation();
     //Resetting the timer
     clearInterval(time);
@@ -68,12 +71,12 @@ $(function(){
       //GET timeArray from math.js to map and parse into seconds
       var timeArray = Calculate.timeArray;
       var timeArraySeconds = $.map(timeArray, Timer.timeInSeconds);
-      console.log(timeArraySeconds);
+      console.log('time history',timeArraySeconds);
       //Finding player's shortest amount of time
       var shortestTime = Math.min.apply(Math,timeArraySeconds);
       console.log(`Fastest Time: ${shortestTime}`);
       if(timeArraySeconds.length>1){
-        $('#fastestTime').html(`Your shortest time is... ${shortestTime}`);
+        $('#fastestTime').html(`&#9889 Your shortest time is... ${shortestTime}s`);
         $('#fastestTime').css('display','block');
       }
       return false;

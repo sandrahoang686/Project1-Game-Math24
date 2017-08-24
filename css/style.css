@@ -16,16 +16,27 @@
   font-style: italic;
   font-size: 7em;
 }
-
-
-img{
+h5 {
+  text-align: center;
+}
+#gameDiv {
+  border: 1px solid #f5f5f5;
+  padding: 3px;
+  width: 10em;
+}
+#brain {
   width: 100px;
   height: auto;
   margin-top: 0.4em;
   margin-left: 0.5em;
-  animation-name: Bounce;
-  animation-duration: 5000ms;
 }
+  #brain.Bounce {
+    -webkit-animation: Bounce 3000ms;
+    -moz-animation: Bounce 3000ms;
+    -ms-animation: Bounce 3000ms;
+    -o-animation: Bounce 3000ms;
+    animation: Bounce 3000ms;
+  }
 nav {
   background-color: #3d1d49;
   text-align: center;
@@ -37,6 +48,19 @@ nav a {
   color: #f5f5f5;
   font-size: 1em;
   padding: 0em 2.5em;
+}
+form, #game-rules {
+  margin-left: 1em;
+}
+span {
+  font-size: 12px;
+}
+#twenty4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+#time-wrapper {
+  margin-right: 1em;
 }
 #instructions, #about {
   background-color: rgba(55,84,84,0.2);
@@ -56,8 +80,6 @@ nav a {
   position: relative;
   width: 40em;
   z-index: 1;
-  /*animation-name: stretch;
-  animation-duration: 3000ms;*/
 }
   #card.Stretch {
     -webkit-animation: stretch 3000ms;
@@ -152,9 +174,17 @@ form {
 }
 
 @keyframes Bounce {
-  0% {bottom: 5%;}
-  70% {transform: scale(1, 1);}
-  100% {bottom: 0; transform: scale(1.15, .8);}
+  0% { transform: translate(2px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(0px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(2px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(2px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 @keyframes stretch {
   0% {
@@ -162,27 +192,5 @@ form {
   }
   100% {
     transform: scale(1);
-  }
-}
-@keyframes slideIn {
-  0% {
-    left: 0;
-  }
-  50% {
-    left: 1000px;
-  }
-  100% {
-    left: 0;
-  }
-}
-@-webkit-keyframes slideIn {
-  0% {
-    left: 0;
-  }
-  50% {
-    left: 1000px;
-  }
-  100% {
-    left: 0;
   }
 }
