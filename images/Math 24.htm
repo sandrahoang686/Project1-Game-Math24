@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///Users/fnr334/dev/Project1-Game-Math24/index.html?# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Math 24</title>
+    <link type="text/css" rel="stylesheet" href="./Math 24_files/style.css" media="screen,projection">
+    <link rel="stylesheet" href="./Math 24_files/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="./Math 24_files/css" rel="stylesheet">
+    <link href="./Math 24_files/css(1)" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1 id="title"> Math 24<img id="brain" src="./Math 24_files/brain.gif"></h1>
+      <nav>
+        <a id="aboutLink" href="file:///Users/fnr334/dev/Project1-Game-Math24/index.html?#">About</a>
+        <a id="instructionsLink" href="file:///Users/fnr334/dev/Project1-Game-Math24/index.html?#">Instructions</a>
+        <a id="gameLink" href="file:///Users/fnr334/dev/Project1-Game-Math24/index.html?#">New Game</a>
+      </nav>
+    </header>
+    <section id="main">
+      <div id="about" style="display: none;">
+        <p>Math 24 is an arithmetical card game and experienced it's peak in the 1990s. The point of the same is to make the number, 24, with all four numbers but there are many versions of the game. The original version allows +, -, *, ÷, and () operations! </p>
+        <a href="https://en.wikipedia.org/wiki/24_Game">~wikipedia</a>
+      </div>
+      <div id="instructions" style="display: none;">
+        <p>You will be playing the original version! Make the number, <span id="twenty4">24</span>, and the only operations you can use are +, -, *, ÷, and (). You must use all four numbers and only once. Remember the operations of math!</p>
+      </div>
+      <div id="newGame" style="visibility: visible;">
+        <div id="input">
+          <form>
+            <label for="expression">Answer</label><br>
+            <input type="text" id="expression" placeholder="solution here!">
+            <div><h6 id="gameDiv" style="visibility: hidden;"></h6></div>
+            <h3 id="results-num" style="display: none;"></h3>
+            <h3 id="results-saying" style="display: none;"></h3>
+          </form>
+          <div id="game-rules"><span>Allowed operations (+, -, *, ÷, and paranthesis</span></div>
+        </div>
+        <div id="card" class="">
+          <div id="numbers" class="inner">
+            <p id="top-num">2</p>
+            <div id="leftRight">
+              <p id="right-num">4</p>
+              <p id="left-num">4</p>
+            </div>
+            <p id="bottom-num">8</p>
+          </div>
+          <div id="diamond-wrapper">
+            <div id="diamond" class="outer">
+            </div>
+          </div>
+        </div>
+        <div id="time-wrapper">
+          <div>
+            <h3 id="fastestTime"></h3>
+          <div>
+            <h3 id="timer" style="display: block;">0:11</h3>
+          </div>
+          <div id="timer-score" style="display: none;">
+              <label for="finishedTime">Finished Time:</label><br>
+            <h4 id="finishedTime"></h4>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <script src="./Math 24_files/jquery-3.2.1.js" charset="utf-8"></script>
+    <script src="./Math 24_files/random.js" charset="utf-8"></script>
+    <script src="./Math 24_files/math.js" charset="utf-8"></script>
+    <script src="./Math 24_files/timer.js" charset="utf-8"></script>
+    <script src="./Math 24_files/game.js" charset="utf-8"></script>
+    <script src="./Math 24_files/main.js" charset="utf-8"></script>
+  
+
+</body></html>
