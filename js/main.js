@@ -82,5 +82,9 @@ $(function(){
       }
       return false;
     }
+  });
+
+  $('#disclaimer').click(function(){
+    $('#disclaimer').children().css('display', 'block');
   })
 });
