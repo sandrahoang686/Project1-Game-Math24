@@ -65,7 +65,7 @@ $(function(){
   $('#expression').keypress(function(e){
     if(e.which==13) {
       $('#solution').empty();
-      // $('.expression').empty();
+      $('#expression').val('');
       var answer=$('input').val();
       //Pass input expression into calculate function
       Calculate.onSubmit(answer,Random.randNumbers);
