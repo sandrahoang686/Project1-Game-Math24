@@ -37,6 +37,7 @@ $(function(){
     //Resetting the timer
     clearInterval(time);
     seconds = 0;
+    minutes = 0;
     //Start timer after Animation
     setTimeout(function(){
       time = setInterval(Timer.timer, 1000);
