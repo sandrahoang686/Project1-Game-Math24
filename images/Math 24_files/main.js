@@ -25,6 +25,7 @@ $(function(){
     $('#results-num').css('display', 'none');
     $('#results-saying').css('display', 'none');
     $('#solution').empty();
+    // $('#expression').text('');
     //Stetch Animation each time new game is clicked
     $('#card').addClass('Stretch');
     $('#card').one(cardAnimation, function(e){
@@ -63,7 +64,7 @@ $(function(){
   $('#expression').keypress(function(e){
     if(e.which==13) {
       $('#solution').empty();
-      // $('.expression').empty();
+      $('.expression').empty(); // !!!not getting to empty out
       var answer=$('input').val();
       //Pass input expression into calculate function
       Calculate.onSubmit(answer,Random.randNumbers);
