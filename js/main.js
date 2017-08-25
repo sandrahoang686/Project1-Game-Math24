@@ -25,6 +25,7 @@ $(function(){
     $('#results-num').css('display', 'none');
     $('#results-saying').css('display', 'none');
     $('#solution').empty();
+    // $('#expression').text('');
     //Stetch Animation each time new game is clicked
     $('#card').addClass('Stretch');
     $('#card').one(cardAnimation, function(e){
